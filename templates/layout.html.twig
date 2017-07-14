@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <title>{% block title %}{% endblock %} - Time2 Tasks</title>
+    {% endblock %}
+</head>
+<body>
+<div style="padding: 20px;">
+    <h1>Simple task manager</h1>
+    {% block header %}
+        {{ include('header.html.twig') }}
+    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer" style="padding-top: 30px;">
+        {% block footer %}
+            &copy; Copyright 2017 by <a href="http://www.time2.digital/">Time2 Digital</a>.
+        {% endblock %}
+    </div>
+</div>
+
+</body>
+</html>
